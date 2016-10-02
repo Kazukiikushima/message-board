@@ -13,10 +13,16 @@
 </div>
 
 <%= form_for(@message) do |f| %>
+  <p>
   名前:
   <%= f.text_field :name %>
-
+  </p>
+  <p>
   内容:
-  <%= f.text_field :body %>
+  </p>
+  <p>
+  <textarea class="form-control" name="message[body]" id="message_body" rows="3" 
+  placeholder="内容をご記入ください" ></textarea>
+  </P>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
